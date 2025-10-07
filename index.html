@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Englio - Where English Meets Brilliance</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #6366f1;
+            --secondary-color: #fbbf24;
+            --accent-color: #ec4899;
+            --dark-color: #1f2937;
+            --light-bg: #f9fafb;
+            --text-color: #374151;
+            --gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --gradient-2: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* HEADER */
+        .header {
+            background: white;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-menu a:hover {
+            color: var(--primary-color);
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* INTRODUCTION */
+        .introduction {
+            padding: 8rem 2rem 4rem;
+            background: var(--gradient);
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .introduction::before {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: pulse 5s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+
+        .intro-content {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .intro-content h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease;
+        }
+
+        .intro-content p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: var(--secondary-color);
+            color: var(--dark-color);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .btn-secondary {
+            background: rgba(255,255,255,0.2);
+            color: white;
+            border: 2px solid white;
+        }
+
+        /* SERVICES */
+        .services {
+            padding: 4rem 2rem;
+            background: var(--light-bg);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--dark-color);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            text-align: center;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        /* GALLERY */
+        .gallery {
+            padding: 4rem 2rem;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            height: 250px;
+            background: var(--gradient);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+
+        /* TEXT BANNER */
+        .text-banner {
+            background: var(--gradient-2);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .text-banner h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* IMAGE BANNER */
+        .image-banner {
+            position: relative;
+            height: 400px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .banner-content {
+            text-align: center;
+            color: white;
+            z-index: 2;
+            position: relative;
+        }
+
+        .banner-content h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        /* TEAM */
+        .team {
+            padding: 4rem 2rem;
+            background: var(--light-bg);
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .team-member {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .team-avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: var(--gradient);
+            margin: 0 auto 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+        }
+
+        /* SCHEDULING */
+        .scheduling {
+            padding: 4rem 2rem;
+        }
+
+        .schedule-container {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .schedule-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .schedule-item {
+            background: var(--gradient);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        /* VIDEO */
+        .video-section {
+            padding: 4rem 2rem;
+            background: var(--light-bg);
+        }
+
+        .video-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .video-placeholder {
+            background: var(--gradient);
+            height: 400px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+        }
+
+        /* CUSTOMER REVIEWS */
+        .reviews {
+            padding: 4rem 2rem;
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .review-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .review-stars {
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+        .review-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--gradient);
+        }
+
+        /* ARTICLE */
+        .article {
+            padding: 4rem 2rem;
+            background: var(--light-bg);
+        }
+
+        .article-content {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        /* LOGO GRID */
+        .logo-grid-section {
+            padding: 4rem 2rem;
+        }
+
+        .logo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .logo-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            text-align: center;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        /* FAQ */
+        .faq {
+            padding: 4rem 2rem;
+            background: var(--light-bg);
+        }
+
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: white;
+            margin-bottom: 1rem;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: bold;
+        }
+
+        .faq-question:hover {
+            background: var(--light-bg);
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+            padding: 1.5rem;
+        }
+
+        /* CONTACT */
+        .contact {
+            padding: 4rem 2rem;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .contact-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .contact-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        /* NEWSLETTER */
+        .newsletter {
+            background: var(--gradient);
+            padding: 3rem 2rem;
+            color: white;
+            text-align: center;
+        }
+
+        .newsletter-form {
+            max-width: 500px;
+            margin: 2rem auto 0;
+            display: flex;
+            gap: 1rem;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 1rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+        }
+
+        .newsletter-form button {
+            padding: 1rem 2rem;
+            background: var(--secondary-color);
+            color: var(--dark-color);
+            border: none;
+            border-radius: 50px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .newsletter-form button:hover {
+            transform: scale(1.05);
+        }
+
+        /* FOOTER */
+        .footer {
+            background: var(--dark-color);
+            color: white;
+            padding: 3rem 2rem 1rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 1rem;
+        }
+
+        .footer-section a {
+            color: #9ca3af;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #374151;
+            color: #9ca3af;
+        }
+
+        /* WhatsApp Float */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #25d366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            z-index: 999;
+            text-decoration: none;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: white;
+                flex-direction: column;
+                padding: 1rem;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .mobile-menu-toggle {
+                display: block;
+            }
+
+            .intro-content h1 {
+                font-size: 2rem;
+            }
+
+            .newsletter-form {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">Englio</div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="#introduction">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#team">Team</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- INTRODUCTION -->
+    <section class="introduction" id="introduction">
+        <div class="intro-content">
+            <h1>Where English Meets Brilliance 🌟</h1>
+            <p>Englio isn't just a name—it's a mindset. Your journey to confident English starts now!</p>
+            <p>📍 Batam | 👨‍🏫 Offline & Online | 🎯 General-Business-Conversation</p>
+            <div class="cta-buttons">
+                <a href="https://wa.me/6285363099234" class="btn btn-primary">
+                    <i class="fab fa-whatsapp"></i> Start Learning Today
+                </a>
+                <a href="#services" class="btn btn-secondary">
+                    Explore Our Programs
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title">🚀 Level Up Your English</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">📚</div>
+                    <h3>For Students</h3>
+                    <p>Small-group fun or focused 1-on-1 private sessions! Master English with engaging methods.</p>
+                    <ul style="text-align: left; margin-top: 1rem;">
+                        <li>Interactive learning</li>
+                        <li>Exam prep (TOEFL/UTBK)</li>
+                        <li>Academic writing</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">💼</div>
+                    <h3>For Professionals</h3>
+                    <p>Speak confidently at work & daily life—regular or private classes tailored for you!</p>
+                    <ul style="text-align: left; margin-top: 1rem;">
+                        <li>Business communication</li>
+                        <li>Presentation skills</li>
+                        <li>Email & reports</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🗣️</div>
+                    <h3>Conversation Class</h3>
+                    <p>100% speaking practice! No boring textbooks, just real conversations that matter.</p>
+                    <ul style="text-align: left; margin-top: 1rem;">
+                        <li>Role-plays & discussions</li>
+                        <li>Real-life scenarios</li>
+                        <li>Small groups</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <h2 class="section-title">Our Learning Journey</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <i class="fas fa-users" style="font-size: 3rem;"></i>
+                    <p>Group Sessions</p>
+                </div>
+                <div class="gallery-item">
+                    <i class="fas fa-laptop" style="font-size: 3rem;"></i>
+                    <p>Online Classes</p>
+                </div>
+                <div class="gallery-item">
+                    <i class="fas fa-coffee" style="font-size: 3rem;"></i>
+                    <p>Speakers' Room</p>
+                </div>
+                <div class="gallery-item">
+                    <i class="fas fa-graduation-cap" style="font-size: 3rem;"></i>
+                    <p>Exam Prep</p>
+                </div>
+                <div class="gallery-item">
+                    <i class="fas fa-briefcase" style="font-size: 3rem;"></i>
+                    <p>Business English</p>
+                </div>
+                <div class="gallery-item">
+                    <i class="fas fa-comments" style="font-size: 3rem;"></i>
+                    <p>Conversation Practice</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TEXT BANNER 1 -->
+    <section class="text-banner">
+        <div class="container">
+            <h2>✨ The Speakers' Room by Englio ✨</h2>
+            <p style="font-size: 1.2rem;">FREE Speaking Sessions Every Week!</p>
+            <p>A judgment-free zone where your voice is welcome. Join us for fun, real-life conversations!</p>
+            <a href="https://wa.me/6285363099234?text=I%20want%20to%20join%20The%20Speakers%20Room!" class="btn btn-primary" style="margin-top: 1.5rem;">
+                Reserve Your FREE Spot
+            </a>
+        </div>
+    </section>
+
+    <!-- IMAGE BANNER 1 -->
+    <section class="image-banner">
+        <div class="banner-content">
+            <h2>Fluency Made Fun! 🎉</h2>
+            <p style="font-size: 1.2rem;">Where words spark connections & confidence grows</p>
+            <div style="margin-top: 2rem;">
+                <i class="fas fa-star" style="font-size: 2rem; margin: 0 0.5rem;"></i>
+                <i class="fas fa-star" style="font-size: 2rem; margin: 0 0.5rem;"></i>
+                <i class="fas fa-star" style="font-size: 2rem; margin: 0 0.5rem;"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- TEAM -->
+    <section class="team" id="team">
+        <div class="container">
+            <h2 class="section-title">Meet Our Expert Instructors</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="team-avatar">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3>Mr. John</h3>
+                    <p>Business English Expert</p>
+                    <p style="margin-top: 1rem; color: #6b7280;">10+ years helping professionals excel in workplace communication</p>
+                </div>
+                <div class="team-member">
+                    <div class="team-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3>Ms. Sarah</h3>
+                    <p>Conversation Specialist</p>
+                    <p style="margin-top: 1rem; color: #6b7280;">Making speaking practice fun and engaging for all levels</p>
+                </div>
+                <div class="team-member">
+                    <div class="team-avatar">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <h3>Mr. David</h3>
+                    <p>TOEFL/UTBK Expert</p>
+                    <p style="margin-top: 1rem; color: #6b7280;">Proven strategies for exam success</p>
+                </div>
+                <div class="team-member">
+                    <div class="team-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3>Ms. Lisa</h3>
+                    <p>General English</p>
+                    <p style="margin-top: 1rem; color: #6b7280;">Building strong foundations with creative methods</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SCHEDULING -->
+    <section class="scheduling" id="scheduling">
+        <div class="container">
+            <h2 class="section-title">Class Schedule</h2>
+            <div class="schedule-container">
+                <p style="text-align: center; margin-bottom: 2rem;">Flexible schedules to fit your busy life!</p>
+                <div class="schedule-grid">
+                    <div class="schedule-item">
+                        <h4>Morning Classes</h4>
+                        <p>Mon-Fri</p>
+                        <p>09:00 - 11:00</p>
+                    </div>
+                    <div class="schedule-item">
+                        <h4>Afternoon Classes</h4>
+                        <p>Mon-Fri</p>
+                        <p>14:00 - 16:00</p>
+                    </div>
+                    <div class="schedule-item">
+                        <h4>Evening Classes</h4>
+                        <p>Mon-Fri</p>
+                        <p>19:00 - 21:00</p>
+                    </div>
+                    <div class="schedule-item">
+                        <h4>Weekend Classes</h4>
+                        <p>Sat-Sun</p>
+                        <p>10:00 - 12:00</p>
+                    </div>
+                    <div class="schedule-item">
+                        <h4>Speakers' Room</h4>
+                        <p>Saturday</p>
+                        <p>11:00 - 12:30</p>
+                        <p style="font-size: 0.9rem;">FREE!</p>
+                    </div>
+                    <div class="schedule-item">
+                        <h4>Private Sessions</h4>
+                        <p>Flexible</p>
+                        <p>By Appointment</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VIDEO -->
+    <section class="video-section">
+        <div class="container">
+            <h2 class="section-title">Experience Englio Learning</h2>
+            <div class="video-container">
+                <div class="video-placeholder">
+                    <i class="fas fa-play-circle"></i>
+                </div>
+                <h3 style="margin-top: 2rem;">See How We Make Learning Fun!</h3>
+                <p style="margin-top: 1rem;">Watch our students in action - from classroom discussions to The Speakers' Room sessions. This is where confidence is built!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CUSTOMER REVIEWS -->
+    <section class="reviews" id="reviews">
+        <div class="container">
+            <h2 class="section-title">What Our Students Say</h2>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="review-stars">
+                        ⭐⭐⭐⭐⭐
+                    </div>
+                    <p>"Englio changed my life! I went from being scared to speak to confidently presenting in English at work. The teachers are amazing!"</p>
+                    <div class="review-author">
+                        <div class="author-avatar"></div>
+                        <div>
+                            <strong>Andi Pratama</strong>
+                            <p style="font-size: 0.9rem; color: #6b7280;">IT Professional</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">
+                        ⭐⭐⭐⭐⭐
+                    </div>
+                    <p>"The Speakers' Room is brilliant! It's FREE and I've made so many friends while improving my English. Highly recommended!"</p>
+                    <div class="review-author">
+                        <div class="author-avatar"></div>
+                        <div>
+                            <strong>Sarah Wijaya</strong>
+                            <p style="font-size: 0.9rem; color: #6b7280;">University Student</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">
+                        ⭐⭐⭐⭐⭐
+                    </div>
+                    <p>"Best English course in Batam! The hybrid system is perfect for my busy schedule. Online or offline, the quality is always top!"</p>
+                    <div class="review-author">
+                        <div class="author-avatar"></div>
+                        <div>
+                            <strong>Michael Tan</strong>
+                            <p style="font-size: 0.9rem; color: #6b7280;">Business Owner</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ARTICLE -->
+    <section class="article">
+        <div class="container">
+            <h2 class="section-title">Why Choose Englio?</h2>
+            <div class="article-content">
+                <h3>Breaking the Traditional Learning Barrier</h3>
+                <p style="margin-top: 1rem;">At Englio, we believe that learning English shouldn't feel like a chore. That's why we've revolutionized the way English is taught in Batam.</p>
+                
+                <h4 style="margin-top: 2rem;">🎯 Our Unique Approach:</h4>
+                <ul style="margin-top: 1rem; line-height: 2;">
+                    <li><strong>No Boring Textbooks:</strong> We use real-life scenarios, current topics, and interactive materials</li>
+                    <li><strong>Speaking-First Method:</strong> You'll speak from day one - because that's how confidence is built</li>
+                    <li><strong>Small Groups:</strong> Maximum 8 students per class ensures everyone gets attention</li>
+                    <li><strong>Hybrid Flexibility:</strong> Choose online or offline based on your schedule</li>
+                    <li><strong>Community Building:</strong> Join The Speakers' Room and practice with friends</li>
+                </ul>
+
+                <p style="margin-top: 2rem;">Whether you're a student preparing for exams, a professional aiming for career growth, or someone who simply wants to communicate better - Englio is your partner in this journey.</p>
+                
+                <blockquote style="margin: 2rem 0; padding: 1rem; background: var(--light-bg); border-left: 4px solid var(--primary-color);">
+                    "Fluency isn't built by studying harder… it's built by speaking louder, bolder & more confidently."
+                </blockquote>
+
+                <p>Ready to transform your English? Join us and see why hundreds of Batam residents trust Englio for their English learning journey.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- LOGO GRID -->
+    <section class="logo-grid-section">
+        <div class="container">
+            <h2 class="section-title">Our Partners & Certifications</h2>
+            <div class="logo-grid">
+                <div class="logo-item">
+                    <i class="fas fa-certificate" style="font-size: 2rem;"></i>
+                    <p>TOEFL Prep</p>
+                </div>
+                <div class="logo-item">
+                    <i class="fas fa-award" style="font-size: 2rem;"></i>
+                    <p>UTBK Ready</p>
+                </div>
+                <div class="logo-item">
+                    <i class="fas fa-building" style="font-size: 2rem;"></i>
+                    <p>Corporate Training</p>
+                </div>
+                <div class="logo-item">
+                    <i class="fas fa-handshake" style="font-size: 2rem;"></i>
+                    <p>Industry Partners</p>
+                </div>
+                <div class="logo-item">
+                    <i class="fas fa-globe" style="font-size: 2rem;"></i>
+                    <p>International Standards</p>
+                </div>
+                <div class="logo-item">
+                    <i class="fas fa-star" style="font-size: 2rem;"></i>
+                    <p>Excellence Awards</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What is The Speakers' Room?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>The Speakers' Room is our FREE weekly speaking practice session held every Saturday. It's a fun, judgment-free zone where you can practice real-life English conversations with other learners. Limited to 14 participants for quality interaction!</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Do you offer online classes?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! We offer hybrid learning - you can choose between offline classes at our Batam Center location or online classes via Zoom. Both options provide the same quality education with interactive sessions.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What levels do you teach?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We teach all levels from beginner to advanced. Before starting, we'll assess your current level to place you in the right class. We have General English, Business English, and Conversation classes for different needs.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How many students per class?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our regular classes have a maximum of 8 students to ensure everyone gets personal attention. We also offer 1-on-1 private sessions for those who prefer individual learning.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Where is your location?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We're located at KDA Junction, Block C4 E, Batam Center. For The Speakers' Room sessions, we meet at Elora Coffee, Batam Center. Easy to find and accessible!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt contact-icon"></i>
+                    <h3>Location</h3>
+                    <p>KDA Junction, Block C4 E</p>
+                    <p>Batam Center, Batam</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-whatsapp contact-icon"></i>
+                    <h3>WhatsApp</h3>
+                    <p>0853 6309 9234</p>
+                    <a href="https://wa.me/6285363099234" class="btn btn-primary" style="margin-top: 1rem;">
+                        Chat Now
+                    </a>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-instagram contact-icon"></i>
+                    <h3>Instagram</h3>
+                    <p>@engliomitralingua</p>
+                    <a href="https://instagram.com/engliomitralingua" class="btn btn-primary" style="margin-top: 1rem;">
+                        Follow Us
+                    </a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-clock contact-icon"></i>
+                    <h3>Operating Hours</h3>
+                    <p>Mon-Fri: 09:00 - 21:00</p>
+                    <p>Sat-Sun: 10:00 - 17:00</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="newsletter">
+        <div class="container">
+            <h2>Stay Updated with Englio</h2>
+            <p>Get free English tips, event updates, and exclusive offers!</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Englio</h4>
+                    <p>Where English Meets Brilliance</p>
+                    <p style="margin-top: 1rem;">Unlock confidence with fun, modern learning in Batam!</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <a href="#services">Our Services</a>
+                    <a href="#team">Our Team</a>
+                    <a href="#scheduling">Schedule</a>
+                    <a href="#faq">FAQ</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Programs</h4>
+                    <a href="#services">General English</a>
+                    <a href="#services">Business English</a>
+                    <a href="#services">Conversation Class</a>
+                    <a href="#text-banner">The Speakers' Room</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>📍 KDA Junction, Batam Center</p>
+                    <p>📱 0853 6309 9234</p>
+                    <p>📧 @engliomitralingua</p>
+                    <div style="margin-top: 1rem;">
+                        <a href="https://wa.me/6285363099234" style="margin-right: 1rem; font-size: 1.5rem;">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="https://instagram.com/engliomitralingua" style="font-size: 1.5rem;">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Englio - All Rights Reserved | Fluency Made Fun! ✨</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/6285363099234" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        mobileMenuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        // FAQ Toggle
+        const faqItems = document.querySelectorAll('.faq-item');
+        
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            
+            question.addEventListener('click', () => {
+                // Close other items
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+                
+                // Toggle current item
+                item.classList.toggle('active');
+                
+                // Rotate icon
+                const icon = question.querySelector('i');
+                if (item.classList.contains('active')) {
+                    icon.style.transform = 'rotate(180deg)';
+                } else {
+                    icon.style.transform = 'rotate(0)';
+                }
+            });
+        });
+
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Newsletter Form
+        const newsletterForm = document.querySelector('.newsletter-form');
+        newsletterForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you for subscribing! We\'ll keep you updated with the latest from Englio.');
+            newsletterForm.reset();
+        });
+
+        // Animation on Scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animation = 'fadeInUp 1s ease forwards';
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements
+        document.querySelectorAll('.service-card, .team-member, .review-card, .gallery-item').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

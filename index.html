@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en-GB">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Englio - Where English Meets Brilliance</title>
+    <title>Englio - Excellence in English Education</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -121,12 +121,19 @@
             font-size: 3rem;
             margin-bottom: 1rem;
             animation: fadeInUp 1s ease;
+            font-weight: 600;
         }
 
         .intro-content p {
             font-size: 1.3rem;
             margin-bottom: 2rem;
             opacity: 0.95;
+        }
+
+        .intro-tagline {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            font-weight: 500;
         }
 
         .cta-buttons {
@@ -170,8 +177,19 @@
         .section-title {
             text-align: center;
             font-size: 2.5rem;
-            margin-bottom: 3rem;
+            margin-bottom: 1rem;
             color: var(--dark-color);
+            font-weight: 600;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #6b7280;
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .services-grid {
@@ -202,9 +220,30 @@
             padding: 2rem;
         }
 
-        .service-icon {
-            font-size: 3rem;
+        .service-content h3 {
             margin-bottom: 1rem;
+            font-size: 1.5rem;
+            color: var(--dark-color);
+        }
+
+        .service-content ul {
+            text-align: left;
+            margin-top: 1rem;
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .service-content li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .service-content li:before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
         }
 
         /* GALLERY */
@@ -266,6 +305,7 @@
         .text-banner h2 {
             font-size: 2.5rem;
             margin-bottom: 1rem;
+            font-weight: 600;
         }
 
         /* IMAGE BANNER */
@@ -299,8 +339,8 @@
         .banner-content h2 {
             font-size: 3rem;
             margin-bottom: 1rem;
+            font-weight: 600;
         }
-
 
         /* TEAM */
         .team {
@@ -332,6 +372,17 @@
             padding: 1.5rem;
         }
 
+        .team-info h3 {
+            margin-bottom: 0.5rem;
+            color: var(--dark-color);
+        }
+
+        .team-info .role {
+            color: var(--primary-color);
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+
         /* SCHEDULING */
         .scheduling {
             padding: 4rem 2rem;
@@ -359,6 +410,11 @@
             padding: 1.5rem;
             border-radius: 10px;
             text-align: center;
+        }
+
+        .schedule-item h4 {
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
         }
 
         /* VIDEO */
@@ -448,6 +504,12 @@
             margin-bottom: 1rem;
         }
 
+        .review-text {
+            font-style: italic;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
         .review-author {
             display: flex;
             align-items: center;
@@ -475,6 +537,19 @@
             padding: 3rem;
             border-radius: 15px;
             box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .article-content h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--dark-color);
+        }
+
+        .article-content h4 {
+            font-size: 1.3rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
         }
 
         .article-image {
@@ -602,6 +677,12 @@
             color: white;
             text-align: center;
             background-blend-mode: multiply;
+        }
+
+        .newsletter h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
         }
 
         .newsletter-form {
@@ -764,15 +845,17 @@
     <!-- INTRODUCTION -->
     <section class="introduction" id="introduction">
         <div class="intro-content">
-            <h1>Where English Meets Brilliance 🌟</h1>
-            <p>Englio isn't just a name—it's a mindset. Your journey to confident English starts now!</p>
-            <p>📍 Batam | 👨‍🏫 Offline & Online | 🎯 General-Business-Conversation</p>
+            <h1>Where English Excellence Meets Professional Brilliance</h1>
+            <p>Transform your communication skills with Batam's premier English education centre</p>
+            <div class="intro-tagline">
+                <strong>Batam Centre Location | Hybrid Learning | Business-Focused Curriculum</strong>
+            </div>
             <div class="cta-buttons">
                 <a href="https://wa.me/6285363099234" class="btn btn-primary">
-                    <i class="fab fa-whatsapp"></i> Start Learning Today
+                    Begin Your Journey
                 </a>
                 <a href="#services" class="btn btn-secondary">
-                    Explore Our Programs
+                    Explore Programmes
                 </a>
             </div>
         </div>
@@ -781,44 +864,45 @@
     <!-- SERVICES -->
     <section class="services" id="services">
         <div class="container">
-            <h2 class="section-title">🚀 Level Up Your English</h2>
+            <h2 class="section-title">Elevate Your English Proficiency</h2>
+            <p class="section-subtitle">Tailored programmes designed to accelerate your language mastery and career advancement</p>
             <div class="services-grid">
                 <div class="service-card">
                     <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?ixlib=rb-4.0.3&w=400&q=80" alt="Students" class="service-image">
                     <div class="service-content">
-                        <div class="service-icon">📚</div>
-                        <h3>For Students</h3>
-                        <p>Small-group fun or focused 1-on-1 private sessions! Master English with engaging methods.</p>
-                        <ul style="text-align: left; margin-top: 1rem;">
-                            <li>Interactive learning</li>
-                            <li>Exam prep (TOEFL/UTBK)</li>
-                            <li>Academic writing</li>
+                        <h3>Academic Excellence</h3>
+                        <p>Comprehensive programmes for students pursuing academic success and international qualifications.</p>
+                        <ul>
+                            <li>Interactive learning methodologies</li>
+                            <li>TOEFL/UTBK preparation</li>
+                            <li>Academic writing mastery</li>
+                            <li>Small group dynamics</li>
                         </ul>
                     </div>
                 </div>
                 <div class="service-card">
                     <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&w=400&q=80" alt="Professionals" class="service-image">
                     <div class="service-content">
-                        <div class="service-icon">💼</div>
-                        <h3>For Professionals</h3>
-                        <p>Speak confidently at work & daily life—regular or private classes tailored for you!</p>
-                        <ul style="text-align: left; margin-top: 1rem;">
-                            <li>Business communication</li>
-                            <li>Presentation skills</li>
-                            <li>Email & reports</li>
+                        <h3>Professional Development</h3>
+                        <p>Advance your career with business English that commands attention and respect in the workplace.</p>
+                        <ul>
+                            <li>Executive communication skills</li>
+                            <li>Presentation excellence</li>
+                            <li>Business correspondence</li>
+                            <li>Negotiation strategies</li>
                         </ul>
                     </div>
                 </div>
                 <div class="service-card">
                     <img src="https://images.unsplash.com/photo-1543269664-56d93c1b41a6?ixlib=rb-4.0.3&w=400&q=80" alt="Conversation" class="service-image">
                     <div class="service-content">
-                        <div class="service-icon">🗣️</div>
-                        <h3>Conversation Class</h3>
-                        <p>100% speaking practice! No boring textbooks, just real conversations that matter.</p>
-                        <ul style="text-align: left; margin-top: 1rem;">
-                            <li>Role-plays & discussions</li>
-                            <li>Real-life scenarios</li>
-                            <li>Small groups</li>
+                        <h3>Conversational Mastery</h3>
+                        <p>Build natural fluency through dynamic conversation practice in real-world contexts.</p>
+                        <ul>
+                            <li>Authentic dialogue practice</li>
+                            <li>Cultural communication</li>
+                            <li>Confidence building</li>
+                            <li>Practical scenarios</li>
                         </ul>
                     </div>
                 </div>
@@ -829,47 +913,48 @@
     <!-- GALLERY -->
     <section class="gallery" id="gallery">
         <div class="container">
-            <h2 class="section-title">Our Learning Journey</h2>
+            <h2 class="section-title">Our Learning Experience</h2>
+            <p class="section-subtitle">Discover the dynamic environment where excellence thrives</p>
             <div class="gallery-grid">
                 <div class="gallery-item">
                     <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&w=400&q=80" alt="Group Learning">
                     <div class="gallery-overlay">
-                        <h3>Group Sessions</h3>
-                        <p>Interactive learning with peers</p>
+                        <h3>Collaborative Learning</h3>
+                        <p>Interactive sessions with peers</p>
                     </div>
                 </div>
                 <div class="gallery-item">
                     <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?ixlib=rb-4.0.3&w=400&q=80" alt="Online Classes">
                     <div class="gallery-overlay">
-                        <h3>Online Classes</h3>
-                        <p>Learn from anywhere</p>
+                        <h3>Digital Excellence</h3>
+                        <p>Premium online instruction</p>
                     </div>
                 </div>
                 <div class="gallery-item">
                     <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&w=400&q=80" alt="Speakers Room">
                     <div class="gallery-overlay">
-                        <h3>Speakers' Room</h3>
-                        <p>FREE practice sessions</p>
+                        <h3>The Speakers' Room</h3>
+                        <p>Complimentary practice sessions</p>
                     </div>
                 </div>
                 <div class="gallery-item">
                     <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-4.0.3&w=400&q=80" alt="Exam Prep">
                     <div class="gallery-overlay">
-                        <h3>Exam Preparation</h3>
-                        <p>TOEFL & UTBK ready</p>
+                        <h3>Examination Preparation</h3>
+                        <p>Strategic test preparation</p>
                     </div>
                 </div>
                 <div class="gallery-item">
                     <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&w=400&q=80" alt="Business English">
                     <div class="gallery-overlay">
-                        <h3>Business English</h3>
+                        <h3>Corporate Training</h3>
                         <p>Professional communication</p>
                     </div>
                 </div>
                 <div class="gallery-item">
                     <img src="https://images.unsplash.com/photo-1598257006458-087169a1f08d?ixlib=rb-4.0.3&w=400&q=80" alt="Conversation Practice">
                     <div class="gallery-overlay">
-                        <h3>Conversation Practice</h3>
+                        <h3>Practical Application</h3>
                         <p>Real-world English</p>
                     </div>
                 </div>
@@ -880,11 +965,11 @@
     <!-- TEXT BANNER 1 -->
     <section class="text-banner">
         <div class="container">
-            <h2>✨ The Speakers' Room by Englio ✨</h2>
-            <p style="font-size: 1.2rem;">FREE Speaking Sessions Every Week!</p>
-            <p>A judgment-free zone where your voice is welcome. Join us for fun, real-life conversations!</p>
-            <a href="https://wa.me/6285363099234?text=I%20want%20to%20join%20The%20Speakers%20Room!" class="btn btn-primary" style="margin-top: 1.5rem;">
-                Reserve Your FREE Spot
+            <h2>The Speakers' Room by Englio</h2>
+            <p style="font-size: 1.2rem; font-weight: 500;">Complimentary Weekly Speaking Sessions</p>
+            <p>Join our exclusive community where professionals refine their spoken English in a supportive, dynamic environment.</p>
+            <a href="https://wa.me/6285363099234?text=I%20would%20like%20to%20reserve%20a%20place%20in%20The%20Speakers%20Room" class="btn btn-primary" style="margin-top: 1.5rem;">
+                Reserve Your Place
             </a>
         </div>
     </section>
@@ -892,51 +977,47 @@
     <!-- IMAGE BANNER 1 -->
     <section class="image-banner">
         <div class="banner-content">
-            <h2>Fluency Made Fun! 🎉</h2>
-            <p style="font-size: 1.2rem;">Where words spark connections & confidence grows</p>
-            <div style="margin-top: 2rem;">
-                <i class="fas fa-star" style="font-size: 2rem; margin: 0 0.5rem;"></i>
-                <i class="fas fa-star" style="font-size: 2rem; margin: 0 0.5rem;"></i>
-                <i class="fas fa-star" style="font-size: 2rem; margin: 0 0.5rem;"></i>
-            </div>
+            <h2>Fluency Through Excellence</h2>
+            <p style="font-size: 1.2rem;">Where Communication Skills Transform Careers</p>
         </div>
     </section>
 
     <!-- TEAM -->
     <section class="team" id="team">
         <div class="container">
-            <h2 class="section-title">Meet Our Expert Instructors</h2>
+            <h2 class="section-title">Our Distinguished Faculty</h2>
+            <p class="section-subtitle">Learn from industry-leading educators with proven track records of success</p>
             <div class="team-grid">
                 <div class="team-member">
                     <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&w=400&q=80" alt="Mr. John" class="team-avatar">
                     <div class="team-info">
-                        <h3>Mr. John</h3>
-                        <p>Business English Expert</p>
-                        <p style="margin-top: 1rem; color: #6b7280;">10+ years helping professionals excel in workplace communication</p>
+                        <h3>Mr. John Harrison</h3>
+                        <p class="role">Business English Specialist</p>
+                        <p style="color: #6b7280;">MBA, CELTA certified. 15+ years transforming professional communication</p>
                     </div>
                 </div>
                 <div class="team-member">
                     <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&w=400&q=80" alt="Ms. Sarah" class="team-avatar">
                     <div class="team-info">
-                        <h3>Ms. Sarah</h3>
-                        <p>Conversation Specialist</p>
-                        <p style="margin-top: 1rem; color: #6b7280;">Making speaking practice fun and engaging for all levels</p>
+                        <h3>Ms. Sarah Mitchell</h3>
+                        <p class="role">Conversational Excellence</p>
+                        <p style="color: #6b7280;">MA Applied Linguistics. Expert in confidence-building methodologies</p>
                     </div>
                 </div>
                 <div class="team-member">
                     <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&w=400&q=80" alt="Mr. David" class="team-avatar">
                     <div class="team-info">
-                        <h3>Mr. David</h3>
-                        <p>TOEFL/UTBK Expert</p>
-                        <p style="margin-top: 1rem; color: #6b7280;">Proven strategies for exam success</p>
+                        <h3>Mr. David Chen</h3>
+                        <p class="role">Test Preparation Expert</p>
+                        <p style="color: #6b7280;">Perfect TOEFL scorer. 98% student success rate</p>
                     </div>
                 </div>
                 <div class="team-member">
                     <img src="https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?ixlib=rb-4.0.3&w=400&q=80" alt="Ms. Lisa" class="team-avatar">
                     <div class="team-info">
-                        <h3>Ms. Lisa</h3>
-                        <p>General English</p>
-                        <p style="margin-top: 1rem; color: #6b7280;">Building strong foundations with creative methods</p>
+                        <h3>Ms. Lisa Anderson</h3>
+                        <p class="role">General English Lead</p>
+                        <p style="color: #6b7280;">Cambridge certified. Innovative curriculum development</p>
                     </div>
                 </div>
             </div>
@@ -946,38 +1027,38 @@
     <!-- SCHEDULING -->
     <section class="scheduling" id="scheduling">
         <div class="container">
-            <h2 class="section-title">Class Schedule</h2>
+            <h2 class="section-title">Flexible Scheduling Options</h2>
+            <p class="section-subtitle">Programmes designed to accommodate your professional commitments</p>
             <div class="schedule-container">
-                <p style="text-align: center; margin-bottom: 2rem;">Flexible schedules to fit your busy life!</p>
                 <div class="schedule-grid">
                     <div class="schedule-item">
-                        <h4>Morning Classes</h4>
-                        <p>Mon-Fri</p>
+                        <h4>Morning Sessions</h4>
+                        <p>Monday-Friday</p>
                         <p>09:00 - 11:00</p>
                     </div>
                     <div class="schedule-item">
-                        <h4>Afternoon Classes</h4>
-                        <p>Mon-Fri</p>
+                        <h4>Afternoon Sessions</h4>
+                        <p>Monday-Friday</p>
                         <p>14:00 - 16:00</p>
                     </div>
                     <div class="schedule-item">
-                        <h4>Evening Classes</h4>
-                        <p>Mon-Fri</p>
+                        <h4>Evening Sessions</h4>
+                        <p>Monday-Friday</p>
                         <p>19:00 - 21:00</p>
                     </div>
                     <div class="schedule-item">
-                        <h4>Weekend Classes</h4>
-                        <p>Sat-Sun</p>
+                        <h4>Weekend Intensive</h4>
+                        <p>Saturday-Sunday</p>
                         <p>10:00 - 12:00</p>
                     </div>
                     <div class="schedule-item">
-                        <h4>Speakers' Room</h4>
+                        <h4>The Speakers' Room</h4>
                         <p>Saturday</p>
                         <p>11:00 - 12:30</p>
-                        <p style="font-size: 0.9rem;">FREE!</p>
+                        <p style="font-size: 0.9rem;">Complimentary</p>
                     </div>
                     <div class="schedule-item">
-                        <h4>Private Sessions</h4>
+                        <h4>Private Tuition</h4>
                         <p>Flexible</p>
                         <p>By Appointment</p>
                     </div>
@@ -989,13 +1070,13 @@
     <!-- VIDEO -->
     <section class="video-section">
         <div class="container">
-            <h2 class="section-title">Experience Englio Learning</h2>
+            <h2 class="section-title">Experience the Englio Difference</h2>
             <div class="video-container">
                 <div class="video-placeholder">
                     <i class="fas fa-play-circle"></i>
                 </div>
-                <h3 style="margin-top: 2rem;">See How We Make Learning Fun!</h3>
-                <p style="margin-top: 1rem;">Watch our students in action - from classroom discussions to The Speakers' Room sessions. This is where confidence is built!</p>
+                <h3 style="margin-top: 2rem;">Witness Excellence in Action</h3>
+                <p style="margin-top: 1rem;">Observe our innovative teaching methods and discover how we're revolutionising English education in Batam.</p>
             </div>
         </div>
     </section>
@@ -1003,44 +1084,45 @@
     <!-- CUSTOMER REVIEWS -->
     <section class="reviews" id="reviews">
         <div class="container">
-            <h2 class="section-title">What Our Students Say</h2>
+            <h2 class="section-title">Client Success Stories</h2>
+            <p class="section-subtitle">Discover how Englio has transformed careers and opened doors to global opportunities</p>
             <div class="reviews-grid">
                 <div class="review-card">
                     <div class="review-stars">
-                        ⭐⭐⭐⭐⭐
+                        ★★★★★
                     </div>
-                    <p>"Englio changed my life! I went from being scared to speak to confidently presenting in English at work. The teachers are amazing!"</p>
+                    <p class="review-text">"Englio's business English programme elevated my professional communication to international standards. I've since been promoted to regional manager and confidently lead meetings with global partners."</p>
                     <div class="review-author">
                         <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&w=100&q=80" alt="Andi" class="author-avatar">
                         <div>
                             <strong>Andi Pratama</strong>
-                            <p style="font-size: 0.9rem; color: #6b7280;">IT Professional</p>
+                            <p style="font-size: 0.9rem; color: #6b7280;">Regional Manager, Tech Industry</p>
                         </div>
                     </div>
                 </div>
                 <div class="review-card">
                     <div class="review-stars">
-                        ⭐⭐⭐⭐⭐
+                        ★★★★★
                     </div>
-                    <p>"The Speakers' Room is brilliant! It's FREE and I've made so many friends while improving my English. Highly recommended!"</p>
+                    <p class="review-text">"The Speakers' Room revolutionised my approach to English conversation. The supportive environment and expert guidance built my confidence remarkably. Highly recommended for serious learners."</p>
                     <div class="review-author">
                         <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&w=100&q=80" alt="Sarah" class="author-avatar">
                         <div>
                             <strong>Sarah Wijaya</strong>
-                            <p style="font-size: 0.9rem; color: #6b7280;">University Student</p>
+                            <p style="font-size: 0.9rem; color: #6b7280;">Medical Student, International Programme</p>
                         </div>
                     </div>
                 </div>
                 <div class="review-card">
                     <div class="review-stars">
-                        ⭐⭐⭐⭐⭐
+                        ★★★★★
                     </div>
-                    <p>"Best English course in Batam! The hybrid system is perfect for my busy schedule. Online or offline, the quality is always top!"</p>
+                    <p class="review-text">"Outstanding programme with exceptional flexibility. The hybrid learning model perfectly accommodates my demanding schedule whilst maintaining premium quality instruction."</p>
                     <div class="review-author">
                         <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&w=100&q=80" alt="Michael" class="author-avatar">
                         <div>
                             <strong>Michael Tan</strong>
-                            <p style="font-size: 0.9rem; color: #6b7280;">Business Owner</p>
+                            <p style="font-size: 0.9rem; color: #6b7280;">CEO, Manufacturing Company</p>
                         </div>
                     </div>
                 </div>
@@ -1051,29 +1133,29 @@
     <!-- ARTICLE -->
     <section class="article">
         <div class="container">
-            <h2 class="section-title">Why Choose Englio?</h2>
+            <h2 class="section-title">The Englio Advantage</h2>
             <div class="article-content">
-                <h3>Breaking the Traditional Learning Barrier</h3>
-                <p style="margin-top: 1rem;">At Englio, we believe that learning English shouldn't feel like a chore. That's why we've revolutionized the way English is taught in Batam.</p>
+                <h3>Redefining English Education Standards</h3>
+                <p style="margin-top: 1rem;">At Englio, we've pioneered a revolutionary approach to English education that delivers measurable results. Our methodology combines cutting-edge pedagogical research with practical application, ensuring rapid progress and lasting proficiency.</p>
                 
                 <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&w=800&q=80" alt="Englio Method" class="article-image">
                 
-                <h4 style="margin-top: 2rem;">🎯 Our Unique Approach:</h4>
+                <h4>Our Distinctive Methodology</h4>
                 <ul style="margin-top: 1rem; line-height: 2;">
-                    <li><strong>No Boring Textbooks:</strong> We use real-life scenarios, current topics, and interactive materials</li>
-                    <li><strong>Speaking-First Method:</strong> You'll speak from day one - because that's how confidence is built</li>
-                    <li><strong>Small Groups:</strong> Maximum 8 students per class ensures everyone gets attention</li>
-                    <li><strong>Hybrid Flexibility:</strong> Choose online or offline based on your schedule</li>
-                    <li><strong>Community Building:</strong> Join The Speakers' Room and practice with friends</li>
+                    <li><strong>Immersive Learning Environment:</strong> Experience total language immersion through carefully crafted scenarios reflecting real-world professional situations</li>
+                    <li><strong>Speaking-First Philosophy:</strong> Prioritise verbal communication from day one, building confidence through consistent practice</li>
+                    <li><strong>Personalised Attention:</strong> Maximum 8 participants per class ensures individualised feedback and accelerated progress</li>
+                    <li><strong>Hybrid Flexibility:</strong> Seamlessly switch between in-person and online sessions without compromising quality</li>
+                    <li><strong>Community Integration:</strong> Join an exclusive network of motivated professionals committed to excellence</li>
                 </ul>
 
-                <p style="margin-top: 2rem;">Whether you're a student preparing for exams, a professional aiming for career growth, or someone who simply wants to communicate better - Englio is your partner in this journey.</p>
+                <p style="margin-top: 2rem;">Whether you're preparing for international examinations, advancing your career, or enhancing your communication skills, Englio provides the expertise and support structure essential for success.</p>
                 
                 <blockquote style="margin: 2rem 0; padding: 1rem; background: var(--light-bg); border-left: 4px solid var(--primary-color);">
-                    "Fluency isn't built by studying harder… it's built by speaking louder, bolder & more confidently."
+                    "Excellence in English isn't achieved through rote learning—it's cultivated through confident practice, expert guidance, and unwavering commitment to improvement."
                 </blockquote>
 
-                <p>Ready to transform your English? Join us and see why hundreds of Batam residents trust Englio for their English learning journey.</p>
+                <p>Join the hundreds of successful professionals who have transformed their careers through Englio's proven methodology. Your journey to English excellence begins here.</p>
             </div>
         </div>
     </section>
@@ -1081,23 +1163,24 @@
     <!-- LOGO GRID -->
     <section class="logo-grid-section">
         <div class="container">
-            <h2 class="section-title">Our Partners & Certifications</h2>
+            <h2 class="section-title">Accreditations & Partnerships</h2>
+            <p class="section-subtitle">Recognised excellence in language education</p>
             <div class="logo-grid">
                 <div class="logo-item">
                     <i class="fas fa-certificate" style="font-size: 2rem;"></i>
-                    <p>TOEFL Prep</p>
+                    <p>TOEFL Certified</p>
                 </div>
                 <div class="logo-item">
                     <i class="fas fa-award" style="font-size: 2rem;"></i>
-                    <p>UTBK Ready</p>
+                    <p>UTBK Accredited</p>
                 </div>
                 <div class="logo-item">
                     <i class="fas fa-building" style="font-size: 2rem;"></i>
-                    <p>Corporate Training</p>
+                    <p>Corporate Partners</p>
                 </div>
                 <div class="logo-item">
                     <i class="fas fa-handshake" style="font-size: 2rem;"></i>
-                    <p>Industry Partners</p>
+                    <p>Industry Leaders</p>
                 </div>
                 <div class="logo-item">
                     <i class="fas fa-globe" style="font-size: 2rem;"></i>
@@ -1118,47 +1201,47 @@
             <div class="faq-list">
                 <div class="faq-item">
                     <div class="faq-question">
-                        <span>What is The Speakers' Room?</span>
+                        <span>What distinguishes The Speakers' Room?</span>
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>The Speakers' Room is our FREE weekly speaking practice session held every Saturday. It's a fun, judgment-free zone where you can practice real-life English conversations with other learners. Limited to 14 participants for quality interaction!</p>
+                        <p>The Speakers' Room is our complimentary weekly forum where participants engage in structured conversation practice. Limited to 14 participants, these sessions provide intensive speaking opportunities in a professional yet supportive environment.</p>
                     </div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question">
-                        <span>Do you offer online classes?</span>
+                        <span>Do you offer remote learning options?</span>
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>Yes! We offer hybrid learning - you can choose between offline classes at our Batam Center location or online classes via Zoom. Both options provide the same quality education with interactive sessions.</p>
+                        <p>Indeed. Our hybrid learning model allows participants to choose between in-person sessions at our Batam Centre facility or premium online instruction via our dedicated platform. Both formats maintain our exceptional educational standards.</p>
                     </div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question">
-                        <span>What levels do you teach?</span>
+                        <span>What proficiency levels do you accommodate?</span>
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>We teach all levels from beginner to advanced. Before starting, we'll assess your current level to place you in the right class. We have General English, Business English, and Conversation classes for different needs.</p>
+                        <p>We cater to all proficiency levels from elementary to advanced. Our comprehensive assessment process ensures optimal class placement, maximising learning efficiency and participant satisfaction.</p>
                     </div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question">
-                        <span>How many students per class?</span>
+                        <span>What is your class size policy?</span>
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>Our regular classes have a maximum of 8 students to ensure everyone gets personal attention. We also offer 1-on-1 private sessions for those who prefer individual learning.</p>
+                        <p>Standard classes are limited to 8 participants, ensuring personalised attention and maximum speaking opportunities. We also offer exclusive one-to-one tuition for accelerated progress.</p>
                     </div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question">
-                        <span>Where is your location?</span>
+                        <span>Where are you located?</span>
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>We're located at KDA Junction, Block C4 E, Batam Center. For The Speakers' Room sessions, we meet at Elora Coffee, Batam Center. Easy to find and accessible!</p>
+                        <p>Our primary facility is located at KDA Junction, Block C4 E, Batam Centre. The Speakers' Room convenes at Elora Coffee, Batam Centre—both venues are easily accessible with ample parking.</p>
                     </div>
                 </div>
             </div>
@@ -1168,20 +1251,21 @@
     <!-- CONTACT -->
     <section class="contact" id="contact">
         <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
+            <h2 class="section-title">Connect With Us</h2>
+            <p class="section-subtitle">Begin your journey to English excellence today</p>
             <div class="contact-grid">
                 <div class="contact-item">
                     <i class="fas fa-map-marker-alt contact-icon"></i>
                     <h3>Location</h3>
                     <p>KDA Junction, Block C4 E</p>
-                    <p>Batam Center, Batam</p>
+                    <p>Batam Centre, Batam</p>
                 </div>
                 <div class="contact-item">
                     <i class="fab fa-whatsapp contact-icon"></i>
                     <h3>WhatsApp</h3>
-                    <p>0853 6309 9234</p>
+                    <p>+62 853 6309 9234</p>
                     <a href="https://wa.me/6285363099234" class="btn btn-primary" style="margin-top: 1rem;">
-                        Chat Now
+                        Enquire Now
                     </a>
                 </div>
                 <div class="contact-item">
@@ -1195,8 +1279,8 @@
                 <div class="contact-item">
                     <i class="fas fa-clock contact-icon"></i>
                     <h3>Operating Hours</h3>
-                    <p>Mon-Fri: 09:00 - 21:00</p>
-                    <p>Sat-Sun: 10:00 - 17:00</p>
+                    <p>Monday-Friday: 09:00 - 21:00</p>
+                    <p>Saturday-Sunday: 10:00 - 17:00</p>
                 </div>
             </div>
         </div>
@@ -1205,10 +1289,10 @@
     <!-- NEWSLETTER -->
     <section class="newsletter">
         <div class="container">
-            <h2>Stay Updated with Englio</h2>
-            <p>Get free English tips, event updates, and exclusive offers!</p>
+            <h2>Stay Informed</h2>
+            <p>Receive exclusive insights, learning resources, and programme updates</p>
             <form class="newsletter-form">
-                <input type="email" placeholder="Enter your email" required>
+                <input type="email" placeholder="Enter your email address" required>
                 <button type="submit">Subscribe</button>
             </form>
         </div>
@@ -1220,28 +1304,28 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h4>Englio</h4>
-                    <p>Where English Meets Brilliance</p>
-                    <p style="margin-top: 1rem;">Unlock confidence with fun, modern learning in Batam!</p>
+                    <p>Excellence in English Education</p>
+                    <p style="margin-top: 1rem;">Transforming communication skills for professional success in Batam and beyond.</p>
                 </div>
                 <div class="footer-section">
                     <h4>Quick Links</h4>
                     <a href="#services">Our Services</a>
-                    <a href="#team">Our Team</a>
+                    <a href="#team">Our Faculty</a>
                     <a href="#scheduling">Schedule</a>
-                    <a href="#faq">FAQ</a>
+                    <a href="#faq">FAQs</a>
                 </div>
                 <div class="footer-section">
-                    <h4>Programs</h4>
+                    <h4>Programmes</h4>
                     <a href="#services">General English</a>
                     <a href="#services">Business English</a>
-                    <a href="#services">Conversation Class</a>
+                    <a href="#services">Conversation Classes</a>
                     <a href="#text-banner">The Speakers' Room</a>
                 </div>
                 <div class="footer-section">
-                    <h4>Contact</h4>
-                    <p>📍 KDA Junction, Batam Center</p>
-                    <p>📱 0853 6309 9234</p>
-                    <p>📧 @engliomitralingua</p>
+                    <h4>Contact Information</h4>
+                    <p>KDA Junction, Batam Centre</p>
+                    <p>+62 853 6309 9234</p>
+                    <p>@engliomitralingua</p>
                     <div style="margin-top: 1rem;">
                         <a href="https://wa.me/6285363099234" style="margin-right: 1rem; font-size: 1.5rem;">
                             <i class="fab fa-whatsapp"></i>
@@ -1253,7 +1337,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Englio - All Rights Reserved | Fluency Made Fun! ✨</p>
+                <p>&copy; 2024 Englio - All Rights Reserved | Excellence Through Education</p>
             </div>
         </div>
     </footer>
@@ -1317,7 +1401,7 @@
         const newsletterForm = document.querySelector('.newsletter-form');
         newsletterForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            alert('Thank you for subscribing! We\'ll keep you updated with the latest from Englio.');
+            alert('Thank you for subscribing. We shall keep you informed of our latest programmes and opportunities.');
             newsletterForm.reset();
         });
 
